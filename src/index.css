@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paleta "papel + tinta oficial" — deliberadamente fora dos 3 clichês
+     de design gerado por IA (creme+terracota / preto+verde-ácido / broadsheet). */
+  --color-paper: #EDEEEA;
+  --color-paper-card: #F7F7F4;
+  --color-ink: #131B2E;
+  --color-ink-soft: #5B6472;
+  --color-brass: #9C7A3C;
+  --color-brass-soft: #C9AD75;
+  --color-forest: #2F5233;
+  --color-forest-soft: #E4EBE2;
+  --color-brick: #8C3A2B;
+  --color-brick-soft: #F3E3DF;
+  --color-line: #D8D9D2;
+
+  --font-display: "Source Serif 4", Georgia, serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+/* Algarismos tabulares em todo texto monoespaçado — essencial pra números
+   de processo CNJ alinharem em colunas de forma consistente. */
+.font-mono, [class*="font-mono"] {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
