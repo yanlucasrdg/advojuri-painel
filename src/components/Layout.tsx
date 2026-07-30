@@ -4,7 +4,9 @@ import { limparApiKey } from '../lib/auth'
 const ITENS_NAV = [
   { rota: '/', rotulo: 'Dashboard' },
   { rota: '/consultar', rotulo: 'Consultar processo' },
-  { rota: '/buscar', rotulo: 'Buscar por nome/CNPJ' },
+  // '/buscar' removido do menu — funcionalidade desativada no backend
+  // (DataJud não expõe nome de parte). A rota ainda existe e mostra uma
+  // explicação, pra quem chegar por link direto ou favorito antigo.
   { rota: '/monitoramentos', rotulo: 'Monitoramentos' },
 ]
 
